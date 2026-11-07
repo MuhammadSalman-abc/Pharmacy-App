@@ -1,0 +1,18 @@
+.customer-search{margin-bottom:24px;border-color:#cfdfd4;background:linear-gradient(120deg,#f1f8f3,#fff 70%)}
+.customer-search-heading{display:flex;align-items:center;gap:12px;padding:21px 23px 0}
+.customer-search-icon{display:grid;place-items:center;width:43px;height:43px;background:#dfeee4;color:#147d64;border-radius:12px;flex-shrink:0}
+.customer-search-heading h2{font-size:17px;color:#24583e}
+.customer-search-heading p{font-size:11px;color:#799581;margin-top:6px}
+.search-live-label{margin-left:auto;font-size:9px;letter-spacing:1.2px;font-weight:650;color:#84a38a;white-space:nowrap}
+.customer-search-bar{display:flex;gap:11px;padding:19px 23px 0}
+.customer-search-bar .search-input{max-width:none;background:#fff;min-height:49px;border-color:#cbded0}
+.customer-search-bar input{font-size:14px;padding:13px 0}
+.customer-search-bar .button{padding:12px 21px;font-size:12px}
+.customer-search-hint{padding:11px 24px 20px;color:#94a58d;font-size:10px;line-height:1.8}
+.customer-search-message{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:19px 24px;color:#7d957c;font-size:12px;line-height:1.7}
+.customer-search-message.search-error{color:#a05f42}
+.customer-result-count{padding:17px 24px 12px;font-size:10px;color:#849a80}
+.customer-search td{font-size:12px}
+.customer-search .medicine-cell strong{font-size:13px}
+.customer-search .stock-number{font-size:17px}
+@media(max-width:740px){.customer-search-heading{padding:17px 16px 0;align-items:flex-start}.customer-search-heading h2{font-size:15px;line-height:1.5}.customer-search-heading p{font-size:10px;line-height:1.7}.search-live-label{display:none}.customer-search-bar{padding:16px 16px 0;flex-wrap:wrap}.customer-search-bar .button{width:100%}.customer-search-bar input{font-size:12px}.customer-search-hint{padding:11px 17px 17px}.customer-search-message{padding:17px}}

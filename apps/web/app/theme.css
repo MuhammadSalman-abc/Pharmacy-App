@@ -1,0 +1,128 @@
+:root{color-scheme:light;--bg:#dce5ec;--ink:#202d3b;--muted:#617484;--green:#178c9a;--green-dark:#116977;--mint:#d0e9ec;--line:#c5d4dd;--amber:#b9782c;--radius:15px}
+body{background:linear-gradient(135deg,#d8e3eb 0%,#e5eaf0 48%,#d6e2e9 100%);color:var(--ink);transition:background-color .35s,color .3s}
+body:before{content:"";position:fixed;inset:-18%;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 14% 18%,#37bac65c 0,transparent 34%),radial-gradient(ellipse at 86% 24%,#688fc34d 0,transparent 32%),radial-gradient(ellipse at 58% 88%,#61cbbd46 0,transparent 36%);filter:blur(28px);animation:ambient-drift 18s ease-in-out infinite alternate}
+body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;background-image:radial-gradient(circle,#187f9361 1px,transparent 1.8px),radial-gradient(circle,#547fb64f 1px,transparent 1.8px);background-size:54px 54px,81px 81px;background-position:0 0,27px 31px;mask-image:linear-gradient(115deg,transparent 3%,#000 47%,transparent 96%);animation:particle-drift 32s linear infinite}
+.workspace{position:relative;z-index:1;background:transparent}
+.sidebar,.topbar{background:rgba(255,255,255,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.sidebar{border-color:#e5e1eb;box-shadow:7px 0 35px #3b326008}
+.topbar{border-color:#e5e1eb}
+.panel,.stat-card,.product-card,.quick-link{border-color:#e5e1eb;box-shadow:0 10px 32px #3832550b;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .25s ease}
+.panel:hover,.stat-card:hover{box-shadow:0 15px 38px #38325514}
+.product-card:hover:not(:disabled),.quick-link:hover{transform:translateY(-2px)}
+.page-title{animation:soft-rise .55s cubic-bezier(.2,.75,.25,1) both}
+.panel,.stat-card{animation:soft-rise .52s cubic-bezier(.2,.75,.25,1) both}
+.stat-card:nth-child(2){animation-delay:.05s}.stat-card:nth-child(3){animation-delay:.1s}.stat-card:nth-child(4){animation-delay:.15s}
+.button,.theme-toggle{transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
+.button.primary{background:linear-gradient(135deg,#1596a0,#326f9b);box-shadow:0 6px 16px #16889433}
+.button.primary:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 9px 22px #16889444}
+.theme-toggle{display:inline-flex;align-items:center;gap:7px;border:1px solid #c3d7df;border-radius:999px;padding:8px 11px;background:#d8e5eb;color:#216d7b;font-size:10px;font-weight:600}
+.theme-toggle:hover{transform:translateY(-1px);background:#c9e1e5;box-shadow:0 5px 15px #286d7b19}
+:root:not([data-theme="dark"]) .sidebar nav button.active,:root:not([data-theme="dark"]) .sidebar-bottom>button.active{color:#116c78}
+:root:not([data-theme="dark"]) .stat-card>strong{color:#185966}
+:root:not([data-theme="dark"]) .stat-icon,:root:not([data-theme="dark"]) .section-icon,:root:not([data-theme="dark"]) .invoice-icon{background:#cfe8eb;color:#167b87}
+:root:not([data-theme="dark"]) .medicine-icon{background:#cfe8eb;color:#167b87}
+:root:not([data-theme="dark"]) .medicine-icon.blue{background:#d3e2f2;color:#4f7198}
+:root:not([data-theme="dark"]) .text-button{color:#116c78}
+:root:not([data-theme="dark"]) .stock-number,:root:not([data-theme="dark"]) .product-bottom>b{color:#185966}
+:root:not([data-theme="dark"]) .product-bottom>span{background:#cce7e9;color:#137782}
+:root:not([data-theme="dark"]) .price-toggle button.selected{color:#116c78}
+:root:not([data-theme="dark"]) .basket-count{background:#cce7e9;color:#116c78}
+:root:not([data-theme="dark"]) .grand-total strong{color:#185966}
+:root:not([data-theme="dark"]) .quick-sale{background:linear-gradient(135deg,#188c98,#326c91)}
+:root:not([data-theme="dark"]) .connect-banner{background:#d9e9ed;border-color:#c5dce2}
+:root:not([data-theme="dark"]) .connect-banner strong{color:#205963}
+:root:not([data-theme="dark"]) .connect-banner p{color:#5f7580}
+:root:not([data-theme="dark"]) .offline-card{background:#d8e5ed;border-color:#c5d6e0;color:#41697e}
+:root:not([data-theme="dark"]) .workspace-avatar{background:#cce7e9;color:#176e78}
+:root:not([data-theme="dark"]) .avatar{background:#cfe2eb;color:#285e77}
+:root:not([data-theme="dark"]) .sidebar,:root:not([data-theme="dark"]) .topbar{background:rgba(217,228,235,.94)}
+:root:not([data-theme="dark"]) .panel,:root:not([data-theme="dark"]) .stat-card,:root:not([data-theme="dark"]) .quick-link,:root:not([data-theme="dark"]) .product-card,:root:not([data-theme="dark"]) .modal{background:#dfe7ed}
+:root:not([data-theme="dark"]) .button.secondary,:root:not([data-theme="dark"]) .pagination button{background:#d5e0e7;border-color:#c3d1da;color:#405666}
+:root:not([data-theme="dark"]) .search-input,:root:not([data-theme="dark"]) label>input,:root:not([data-theme="dark"]) label>select,:root:not([data-theme="dark"]) .cart-line input,:root:not([data-theme="dark"]) .sales-filter-bar input{background:#d4e0e7;border-color:#bdcdd8;color:#2d4050}
+:root:not([data-theme="dark"]) .search-input input::placeholder,:root:not([data-theme="dark"]) input::placeholder{color:#718391}
+:root:not([data-theme="dark"]) .receipt-brand,:root:not([data-theme="dark"]) .form-divider h3,:root:not([data-theme="dark"]) .form-guide h3{color:#176d78}
+:root:not([data-theme="dark"]) .medicine-cell strong,:root:not([data-theme="dark"]) .quick-link b{color:#2d3f4c}
+:root:not([data-theme="dark"]) .local-status,:root:not([data-theme="dark"]) .form-guide p,:root:not([data-theme="dark"]) label{color:#586b79}
+:root:not([data-theme="dark"]) .settings-form label{color:#445b6a}
+:root:not([data-theme="dark"]) .avatar{box-shadow:0 0 0 1px #b8ccd6;border-color:#d9e4eb}
+:root:not([data-theme="dark"]) button:focus-visible,:root:not([data-theme="dark"]) a:focus-visible{outline-color:#258b9a}
+:root:not([data-theme="dark"]) th{background:#d3e0e7;border-color:#c5d4dd;color:#566d7c}
+:root:not([data-theme="dark"]) .empty-state>span{background:#cbdfe5;color:#287b89}
+:root:not([data-theme="dark"]) .form-actions{background:#d8e2e8}
+:root:not([data-theme="dark"]) .calculated,:root:not([data-theme="dark"]) .restock-current{background:#d4e6e9;border-color:#c0d7dc;color:#4d6f7b}
+:root:not([data-theme="dark"]) .calculated strong,:root:not([data-theme="dark"]) .restock-current b{color:#176b78}
+:root:not([data-theme="dark"]) .price-toggle{background:#cadbe3}
+:root:not([data-theme="dark"]) .price-toggle button.selected{background:#dce7eb}
+:root:not([data-theme="dark"]) .toast{background:#cde6e5;border-color:#b7d9d7;color:#216d72}
+:root:not([data-theme="dark"]) .error-box{background:#eadbd8;border-color:#dfc5c0;color:#8e514a}
+@keyframes ambient-drift{0%{transform:translate3d(-1.2%,0,0) scale(1)}100%{transform:translate3d(1.2%,1.4%,0) scale(1.035)}}
+@keyframes particle-drift{0%{transform:translate3d(0,-18px,0)}100%{transform:translate3d(27px,38px,0)}}
+@keyframes soft-rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111820;--ink:#e7edf2;--muted:#9aaab6;--green:#42b9c2;--green-dark:#267f91;--mint:#1b343d;--line:#2a3d47;--amber:#e5b669}
+:root[data-theme="dark"] body{background:linear-gradient(135deg,#111820 0%,#17232c 52%,#111b24 100%);color:var(--ink)}
+:root[data-theme="dark"] body:before{background:radial-gradient(ellipse at 12% 15%,#11a6ad55 0,transparent 34%),radial-gradient(ellipse at 86% 20%,#367fd24c 0,transparent 32%),radial-gradient(ellipse at 60% 90%,#37c4ad40 0,transparent 36%);filter:blur(34px)}
+:root[data-theme="dark"] body:after{opacity:.3;background-image:radial-gradient(circle,#62d6dc77 1px,transparent 1.9px),radial-gradient(circle,#78aef066 1px,transparent 1.9px)}
+:root[data-theme="dark"] .sidebar,:root[data-theme="dark"] .topbar{background:rgba(17,28,23,.91);border-color:#273a30}
+:root[data-theme="dark"] .sidebar{box-shadow:7px 0 35px #00000022}
+:root[data-theme="dark"] .panel,:root[data-theme="dark"] .stat-card,:root[data-theme="dark"] .quick-link,:root[data-theme="dark"] .product-card,:root[data-theme="dark"] .modal{background:#14211b;border-color:#293d33;box-shadow:0 12px 36px #00000020}
+:root[data-theme="dark"] .workspace-tag,:root[data-theme="dark"] .offline-card,:root[data-theme="dark"] .search-input,:root[data-theme="dark"] .sales-filter-bar,:root[data-theme="dark"] .form-actions{background:#111d17;border-color:#2b4035}
+:root[data-theme="dark"] .workspace-tag,:root[data-theme="dark"] .offline-card{color:#cbc4e7}
+:root[data-theme="dark"] .workspace-avatar,:root[data-theme="dark"] .section-icon,:root[data-theme="dark"] .medicine-icon,:root[data-theme="dark"] .invoice-icon,:root[data-theme="dark"] .empty-state>span{background:#1c3740;color:#80d9dd}
+:root[data-theme="dark"] .sidebar nav button,:root[data-theme="dark"] .sidebar-bottom>button{color:#a4b4a9}
+:root[data-theme="dark"] .sidebar nav button.active,:root[data-theme="dark"] .sidebar-bottom>button.active{background:#1b343d;color:#80d9dd}
+:root[data-theme="dark"] .offline-card{border-color:#2d4537}
+:root[data-theme="dark"] .offline-card small,:root[data-theme="dark"] .workspace-tag small,:root[data-theme="dark"] .local-status,:root[data-theme="dark"] .brand>div>span{color:#aaa9bc}
+:root[data-theme="dark"] h1,:root[data-theme="dark"] h2,:root[data-theme="dark"] h3,:root[data-theme="dark"] .medicine-cell strong,:root[data-theme="dark"] .quick-link b{color:#e0eee5}
+:root[data-theme="dark"] .breadcrumb,:root[data-theme="dark"] .breadcrumb b,:root[data-theme="dark"] .panel-heading p,:root[data-theme="dark"] .page-title p,:root[data-theme="dark"] .stat-card>div,:root[data-theme="dark"] .stat-card>p,:root[data-theme="dark"] .muted,:root[data-theme="dark"] .result-count,:root[data-theme="dark"] .date-label{color:#9daea4}
+:root[data-theme="dark"] .stat-card>strong{color:#83dbe0}
+:root[data-theme="dark"] .stat-icon{background:#1c3740;color:#83dbe0}
+:root[data-theme="dark"] .stat-card.attention .stat-icon{background:#44351f;color:#f2c574}
+:root[data-theme="dark"] .stat-card.attention>strong{color:#f0bd65}
+:root[data-theme="dark"] th{background:#18251e;border-color:#293b31;color:#9fb1a5}
+:root[data-theme="dark"] td{border-color:#27392f;color:#b3c2b8}
+:root[data-theme="dark"] .medicine-cell small,:root[data-theme="dark"] .product-card>small,:root[data-theme="dark"] .cart-line>small,:root[data-theme="dark"] .cell-unit{color:#92a79a}
+:root[data-theme="dark"] .stock-number,:root[data-theme="dark"] .product-bottom>b{color:#83dbe0}
+:root[data-theme="dark"] .button.secondary,:root[data-theme="dark"] .pagination button{background:#192820;border-color:#344a3d;color:#c1d2c7}
+:root[data-theme="dark"] .theme-toggle{background:#1d2d37;border-color:#38525e;color:#86dbe0}
+:root[data-theme="dark"] .theme-toggle:hover{background:#263b46}
+:root[data-theme="dark"] .offline-label,:root[data-theme="dark"] footer,:root[data-theme="dark"] .eyebrow,:root[data-theme="dark"] .nav-label,:root[data-theme="dark"] .quick-link small,:root[data-theme="dark"] .tip{color:#aaaabd}
+:root[data-theme="dark"] .avatar{background:#302d4c;color:#d6ceff;border-color:#191a27;box-shadow:0 0 0 1px #484363}
+:root[data-theme="dark"] .search-input input,:root[data-theme="dark"] label>input,:root[data-theme="dark"] label>select,:root[data-theme="dark"] .cart-line input,:root[data-theme="dark"] .sales-filter-bar input{background:#101b15;border-color:#34483b;color:#e0ece4}
+:root[data-theme="dark"] label,:root[data-theme="dark"] .settings-form label{color:#bfd2c5}
+:root[data-theme="dark"] .search-input input::placeholder,:root[data-theme="dark"] input::placeholder{color:#71877a}
+:root[data-theme="dark"] .price-toggle{background:#101b15}
+:root[data-theme="dark"] .price-toggle button{color:#94a99a}
+:root[data-theme="dark"] .price-toggle button.selected{background:#263b2e;color:#bce5c1}
+:root[data-theme="dark"] .basket-count{background:#1e3a43;color:#9be5e7}
+:root[data-theme="dark"] .badge.green{background:#1c392b;color:#86d0a0}
+:root[data-theme="dark"] .badge.amber{background:#42351f;color:#f0c373}
+:root[data-theme="dark"] .badge.red{background:#482923;color:#ed9c83}
+:root[data-theme="dark"] .low-explainer{background:#302819;border-color:#4c3d25;color:#edc16f}
+:root[data-theme="dark"] .low-explainer b,:root[data-theme="dark"] .low-explainer small{color:#e4c17d}
+:root[data-theme="dark"] .connect-banner{background:#1b3038;border-color:#31505a}
+:root[data-theme="dark"] .connect-banner strong{color:#a7e3e4}
+:root[data-theme="dark"] .connect-banner p,:root[data-theme="dark"] .form-guide p{color:#a0b4a6}
+:root[data-theme="dark"] .calculated,:root[data-theme="dark"] .restock-current{background:#1b2c20;border-color:#354b38;color:#b6d2a5}
+:root[data-theme="dark"] .calculated strong,:root[data-theme="dark"] .restock-current b,:root[data-theme="dark"] .form-guide b{color:#b7dda0}
+:root[data-theme="dark"] .toast{background:#173528;border-color:#28563d;color:#a7e0b8}
+:root[data-theme="dark"] .error-box{background:#38231d;border-color:#624033;color:#f0b49d}
+:root[data-theme="dark"] .delete-sale-warning{background:#33291b;border-color:#56452a;color:#f0c678}
+:root[data-theme="dark"] .delete-sale-details{background:#111d17;border-color:#2c4034;color:#c3d3c8}
+:root[data-theme="dark"] .delete-sale-details b{color:#e5c58a}
+:root[data-theme="dark"] .receipt-brand{color:#76cea0}
+:root[data-theme="dark"] .receipt>p,:root[data-theme="dark"] .receipt td>small{color:#9bb1a1}
+:root[data-theme="dark"] .receipt-total{border-color:#304238;color:#dae8dd}
+:root[data-theme="dark"] .quick-sale{background:linear-gradient(135deg,#148d99,#315e9a)}
+:root[data-theme="dark"] .pagination{border-color:#293b31;color:#98ad9e}
+:root[data-theme="dark"] .empty-state h3{color:#bdd3c2}
+:root[data-theme="dark"] .empty-state p{color:#91a79a}
+:root[data-theme="dark"] .text-button{color:#69d1d7}
+:root[data-theme="dark"] .grand-total strong{color:#86dce0}
+:root[data-theme="dark"] .sales-filter-total b{color:#86dce0}
+:root[data-theme="dark"] .voided-sale-row td,:root[data-theme="dark"] .voided-sale-row .medicine-cell strong,:root[data-theme="dark"] .voided-sale-row td>b{color:#75867a}
+:root[data-theme="dark"] footer{border-color:#293b31}
+:root[data-theme="dark"] .panel:hover,:root[data-theme="dark"] .stat-card:hover{box-shadow:0 15px 38px #00000031}
+:root[data-theme="dark"] button:focus-visible,:root[data-theme="dark"] a:focus-visible{outline-color:#5ed3dd}
+
+@media(prefers-reduced-motion:reduce){body:before,body:after,.page-title,.panel,.stat-card{animation:none!important}.button,.theme-toggle,.product-card,.quick-link{transition:none!important}}

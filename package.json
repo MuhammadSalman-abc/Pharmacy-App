@@ -1,0 +1,49 @@
+{
+  "name": "pharmacy-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k npm:dev:api npm:dev:web",
+    "dev:api": "tsx watch apps/api/src/index.ts",
+    "dev:web": "next dev apps/web --hostname 127.0.0.1 -p 3000",
+    "build:api": "tsc -p apps/api/tsconfig.json",
+    "build:web": "next build apps/web",
+    "build": "npm run build:api && npm run build:web",
+    "validate": "npm run build",
+    "start:web": "node scripts/serve-web.cjs",
+    "start:api": "node apps/api/dist/apps/api/src/index.js",
+    "test": "tsx --test tests/backend.test.ts",
+    "db:init": "tsx scripts/init-db.ts",
+    "db:start": "node scripts/start-database.cjs",
+    "pharmacy": "node scripts/launch-pharmacy.cjs",
+    "pharmacy:desktop": "node scripts/launch-pharmacy.cjs --desktop",
+    "token:copy": "node scripts/copy-local-token.cjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "lucide-react": "^0.468.0",
+    "mongodb": "^6.21.0",
+    "mongoose": "^8.13.2",
+    "next": "^16.0.0",
+    "pdfkit": "^0.20.2",
+    "pino": "^9.6.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "@types/pdfkit": "^0.17.7",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/supertest": "^6.0.2",
+    "concurrently": "^9.1.2",
+    "mongodb-memory-server-core": "^10.1.4",
+    "supertest": "^7.1.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
