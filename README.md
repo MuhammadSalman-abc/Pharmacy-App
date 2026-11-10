@@ -8,6 +8,12 @@ Run `create-desktop-shortcut.vbs` once from this folder to add **MediStock Pharm
 
 The app window uses Microsoft Edge's installed app mode, without tabs or an address bar. The database and API remain on this computer.
 
+## Phone-only offline app
+
+The phone build saves medicines, inventory, sales and invoices in that phone's IndexedDB database. No laptop, backend, MongoDB or internet is required after the install. On the PC, run `scripts/build-phone.bat` (or `npm run build:web`) to create `apps/web/out`. Host that folder once on a secure HTTPS static host and open the URL on the Android phone; Chrome's menu offers **Install app**. Launch MediStock from its new home-screen icon. Its `?local=1` start URL selects phone-only mode. Data is separate on each device; in Settings, use **Download data backup** regularly and restore the JSON file to move data. The hosted static files only deliver the app shell and never store pharmacy records.
+
+The HTTPS static hosting is needed only to install and update the app. After installation, the app shell and its local database work offline. Directly producing an APK requires Android build tools and a separate native Android packaging project; the PWA install keeps the app standalone without laptop runtime.
+
 - [Professional architecture and flow diagrams](docs/PROFESSIONAL-ARCHITECTURE.md)
 - [Software licenses and distribution register](docs/LICENSES.md)
 

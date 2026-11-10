@@ -17,6 +17,7 @@
     "db:start": "node scripts/start-database.cjs",
     "pharmacy": "node scripts/launch-pharmacy.cjs",
     "pharmacy:desktop": "node scripts/launch-pharmacy.cjs --desktop",
+    "share:phone": "node scripts/share-phone.cjs",
     "token:copy": "node scripts/copy-local-token.cjs"
   },
   "dependencies": {

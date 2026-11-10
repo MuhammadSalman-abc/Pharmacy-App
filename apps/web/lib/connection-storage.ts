@@ -8,7 +8,7 @@ function parseConnection(raw: string | null): Connection | null {
     const config = JSON.parse(raw);
     if (typeof config.url !== 'string' || typeof config.token !== 'string' || config.token.length < 32) return null;
     const url = new URL(config.url);
-    if (url.protocol !== 'http:' || !['127.0.0.1', 'localhost', '[::1]'].includes(url.hostname) || url.username || url.password || url.search || url.hash) return null;
+    if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password || url.search || url.hash) return null;
     return { url: url.toString().replace(/\/$/, ''), token: config.token };
   } catch { return null; }
 }

@@ -1,8 +1,12 @@
-export type Medicine = { _id: string; name: string; barcode?: string; form: string; strength: number; strengthUnit: string; quantity: number; minimumStock: number; purchasePricePaisa: number; retailPricePaisa: number; wholesalePricePaisa: number };
-export type Sale = { _id: string; invoiceNumber: string; createdAt: string; voidedAt?: string; priceMode: string; totalPaisa: number; items: { medicineId: string; nameSnapshot: string; strengthSnapshot: string; quantity: number; unitPricePaisa: number; totalPaisa: number }[] };
+export type Medicine = { _id: string; name: string; barcode?: string; form: string; strength: number; strengthUnit: string; quantity: number; minimumStock: number; purchasePricePaisa: number; retailPricePaisa: number; wholesalePricePaisa: number; archived?: boolean; createdAt?: string; updatedAt?: string };
+export type Sale = { _id: string; requestId?: string; fingerprint?: string; invoiceNumber: string; createdAt: string; voidedAt?: string; priceMode: string; totalPaisa: number; items: { medicineId: string; nameSnapshot: string; strengthSnapshot: string; quantity: number; unitPricePaisa: number; totalPaisa: number }[] };
 export type SaleTotals = { totalPaisa: number; invoices: number; units: number };
 export type List<T> = { data: T[]; meta: { total: number; page: number; limit: number; summary?: SaleTotals; daily?: { _id: string; totalPaisa: number; invoices: number; units: number }[] } };
 export type Connection = { url: string; token: string };
+export const OFFLINE_MODE = true;
+export const defaultApiUrl = typeof window !== 'undefined' && window.location.hostname !== '127.0.0.1' && window.location.hostname !== 'localhost' && window.location.hostname !== '::1'
+  ? `${window.location.protocol}//${window.location.hostname}:5000/api`
+  : 'http://127.0.0.1:5000/api';
 export class ApiError extends Error { constructor(message: string, public code: string) { super(message); } }
 export async function api<T>(config: Connection, path: string, options: RequestInit = {}): Promise<T> {
   if (!config.token) throw new ApiError('Connect your local server in Settings to continue.', 'NOT_CONNECTED');

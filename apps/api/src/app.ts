@@ -23,8 +23,10 @@ export function createApp(options: { token: string; origin?: string; logger?: pi
   });
   app.use((req, res, next) => {
     if (req.headers.origin) {
-      if (!options.origin || req.headers.origin !== options.origin) return next(new AppError(403, 'ORIGIN_DENIED', 'Origin not allowed'));
-      res.setHeader('Access-Control-Allow-Origin', options.origin); res.setHeader('Vary', 'Origin');
+      const origin = req.headers.origin;
+      const allowed = options.origin ? origin === options.origin : /^https?:\/\/([a-z\d-]+\.)*trycloudflare\.com(?::\d+)?$/i.test(origin);
+      if (!allowed) return next(new AppError(403, 'ORIGIN_DENIED', 'Origin not allowed'));
+      res.setHeader('Access-Control-Allow-Origin', origin); res.setHeader('Vary', 'Origin');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
     }
     if (req.method === 'OPTIONS') { res.sendStatus(204); return; }

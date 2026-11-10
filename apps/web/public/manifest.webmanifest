@@ -1,0 +1,15 @@
+{
+  "id": "/",
+  "name": "MediStock Pharmacy",
+  "short_name": "MediStock",
+  "description": "Offline pharmacy inventory and point of sale",
+  "start_url": "/?local=1",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#dce5ec",
+  "theme_color": "#178c9a",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

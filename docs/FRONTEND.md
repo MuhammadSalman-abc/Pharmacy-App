@@ -9,6 +9,17 @@ npm run dev:web
 
 Open http://127.0.0.1:3000. Start the MongoDB replica set and backend using [BACKEND.md](BACKEND.md), then open Settings & connection in the sidebar. Enter `http://127.0.0.1:5000/api` and the private API_TOKEN configured in the backend `.env`. Set backend UI_ORIGIN to `http://127.0.0.1:3000`.
 
+## Frontend module layout
+
+- `apps/web/app/page.tsx` composes the workspace shell and feature screens.
+- `apps/web/hooks/use-pharmacy-workspace.ts` owns workspace state, data loading, and pharmacy actions.
+- `apps/web/components/workspace/` contains screen-level modules, shared tables/dialogs, and navigation.
+- `apps/web/components/medicines/` contains medicine search, form, delete, and low-stock PDF modules.
+- `apps/web/components/demands/` contains demand-list export modules.
+- `apps/web/lib/` contains API contracts, connection persistence, and offline IndexedDB storage.
+
+Screens receive data and callbacks through props; the workspace hook owns writes and cross-screen state.
+
 The verified connection is remembered in localStorage for this browser profile and site on this laptop, never in a NEXT_PUBLIC environment variable or source bundle. Refreshing, closing a tab, or restarting the browser restores it automatically. Existing sessionStorage connections migrate on the next load. Disconnect removes both stored copies. Clearing site data, using private browsing/a different browser, or changing the backend token requires reconnecting. This is the development connection workflow; Electron preload/main will manage the connection in the packaged desktop release. No backend secrets are copied into frontend build configuration.
 
 ## Included screens
@@ -26,6 +37,8 @@ The verified connection is remembered in localStorage for this browser profile a
 Checkout retains the same request ID after an uncertain network response and locks basket edits until the request can be retried. A confirmed validation/stock error releases the basket for correction. The backend remains the source of truth for quantities and final prices. Counts never use fabricated sample data; disconnected screens show connection guidance.
 
 ## Production frontend
+
+The exported frontend includes a PWA manifest, home-screen icon, service worker, and a phone-only mode at `/?local=1`. This mode stores medicines, stock, invoices, movements and backup files in IndexedDB and needs no API. Build it with `npm run build:web`, host `apps/web/out` on HTTPS, and install from the Android browser menu. After installation, launching from the home-screen icon opens local mode and works offline; only app-shell delivery and future updates use hosting. Back up and restore the phone database in Workspace settings.
 
 ```powershell
 npm run build

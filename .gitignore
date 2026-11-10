@@ -8,3 +8,5 @@ apps/web/.next/
 apps/web/out/
 *.tsbuildinfo
 tmp/pdfs/
+MediStock-source.zip
+apps/web/medistock-phone-pwa.zip

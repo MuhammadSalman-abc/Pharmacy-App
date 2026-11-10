@@ -1,0 +1,146 @@
+@media(max-width:760px){
+  .workspace{display:block;min-height:100dvh}
+  .sidebar{position:sticky;top:0;z-index:30;width:100%;height:auto;padding:10px 12px 8px;border-right:0;border-bottom:1px solid var(--line);box-shadow:0 5px 18px #20364a12}
+  .brand{font-size:20px;letter-spacing:-.7px;padding:0 2px;gap:9px}
+  .brand-mark{width:34px;height:34px;border-radius:10px}
+  .brand-mark svg{width:22px}
+  .workspace-tag,.nav-label,.sidebar-bottom,.add-sidebar{display:none}
+  .sidebar nav{display:flex;flex-direction:row;gap:5px;margin:10px -2px 0;padding:1px 2px 4px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none}
+  .sidebar nav::-webkit-scrollbar{display:none}
+  .sidebar nav button{position:relative;flex:0 0 auto;white-space:nowrap;width:auto;min-height:36px;gap:6px;padding:8px 10px;border-radius:9px;font-size:10px}
+  .sidebar nav button svg{width:15px;height:15px}
+  .sidebar nav button.active:before{left:8px;bottom:0;top:auto;width:calc(100% - 16px);height:2px;border-radius:2px}
+  .nav-count{min-width:16px;height:16px;font-size:8px}
+  .main-shell{width:100%;min-width:0}
+  .topbar{height:48px;padding:0 14px}
+  .breadcrumb{gap:6px;font-size:9px;min-width:0;overflow:hidden}
+  .breadcrumb b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topbar-right{gap:9px}
+  .offline-label{font-size:0;gap:0}
+  .offline-label svg{width:15px}
+  .avatar{width:27px;height:27px;font-size:9px}
+  .theme-toggle{padding:7px 9px;font-size:9px}
+  .theme-toggle svg{width:14px;height:14px}
+  main{padding:20px 13px 0}
+  .page-title{align-items:flex-start;gap:12px;margin-bottom:19px}
+  .eyebrow{font-size:8px;margin-bottom:6px;letter-spacing:1.3px}
+  h1{font-size:21px;line-height:1.2;letter-spacing:-.5px}
+  .page-title p{font-size:10px;line-height:1.55;margin-top:6px}
+  .title-actions{gap:6px;flex-wrap:wrap;justify-content:flex-end}
+  .button{min-height:35px;padding:8px 10px;font-size:10px;gap:5px}
+  .title-actions .button svg{width:14px}
+  .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:16px}
+  .stat-card{min-width:0;padding:13px 12px;border-radius:13px}
+  .stat-card>div{font-size:9px;gap:5px}
+  .stat-icon{width:27px;height:27px;border-radius:8px}
+  .stat-icon svg{width:16px}
+  .stat-card>strong{font-size:25px;margin-top:5px}
+  .stat-card>p{font-size:8px;line-height:1.5;margin-top:5px}
+  .dashboard-grid{grid-template-columns:minmax(0,1fr);gap:13px}
+  .quick-panel{display:block}
+  .panel{border-radius:13px}
+  .panel-heading{gap:9px;padding:16px 14px 13px}
+  .panel-heading h2{font-size:12px;line-height:1.45}
+  .panel-heading p{font-size:9px;line-height:1.5}
+  .panel-heading>svg{width:17px}
+  .table-toolbar{padding:12px;gap:8px;flex-wrap:wrap}
+  .table-toolbar .search-input{max-width:none;min-width:0}
+  .search-input{padding:0 9px;gap:6px}
+  .search-input svg{width:16px}
+  .search-input input{font-size:10px;padding:10px 0;min-width:0}
+  table{font-size:10px}
+  th,td{padding:10px 11px}
+  th{font-size:8px}
+  td{font-size:9px}
+  .medicine-cell{gap:7px}
+  .medicine-icon{width:29px;height:29px;border-radius:8px}
+  .medicine-icon svg{width:16px}
+  .medicine-cell strong{font-size:10px}
+  .medicine-cell small{font-size:8px;white-space:normal;line-height:1.45}
+  .row-actions{gap:5px;flex-wrap:wrap}
+  .delete-row-button{padding:5px 6px;font-size:9px}
+  .recent-panel{margin-top:15px}
+  .quick-sale{margin:0 13px 10px;width:calc(100% - 26px);min-height:112px;padding:16px}
+  .quick-link{margin:0 13px 12px;width:calc(100% - 26px)}
+  .tip{padding:12px 15px}
+  .pagination{padding:10px 12px;font-size:9px}
+  .pagination button{width:29px;height:29px}
+  .low-explainer{padding:13px;gap:9px}
+  .low-explainer b{font-size:10px;line-height:1.5}
+  .low-explainer small{font-size:9px;line-height:1.6}
+  .form-layout,.settings-layout{grid-template-columns:minmax(0,1fr);gap:13px}
+  .form-guide{padding:14px 5px}
+  .form-guide h3{font-size:13px;margin:10px 0}
+  .form-guide p{font-size:10px;line-height:1.7;margin-top:10px}
+  .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 10px;padding:16px 13px}
+  .form-grid .span2,.form-grid .calculated{grid-column:span 2}
+  label{font-size:10px}
+  label>input,label>select{font-size:11px;padding:10px;margin-top:7px}
+  .form-divider{padding:16px 14px 0}
+  .section-heading{padding:15px 13px;gap:9px}
+  .section-heading p{font-size:9px;line-height:1.5}
+  .form-actions{padding:13px;gap:8px}
+  .settings-form{padding:16px 13px}
+  .settings-form label{margin-bottom:17px}
+  .settings-actions{flex-wrap:wrap}
+  .pos-layout{grid-template-columns:minmax(0,1fr);gap:13px}
+  .pos-products{min-height:0}
+  .catalog-heading{padding:12px 13px 0;font-size:8px}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px}
+  .product-card{padding:11px;border-radius:11px}
+  .product-top{margin-bottom:10px}
+  .product-stock{font-size:8px}
+  .product-card>strong{font-size:10px;line-height:1.4}
+  .product-card>small{font-size:8px;line-height:1.4}
+  .product-bottom{margin-top:11px}
+  .product-bottom>b{font-size:10px}
+  .product-bottom>span{min-width:25px;width:25px;height:25px;padding:0;font-size:0}
+  .product-bottom>span svg{width:15px}
+  .basket{position:static}
+  .basket>.panel-heading p{max-width:250px}
+  .price-toggle{margin:0 13px 8px}
+  .cart-lines{min-height:130px;max-height:40dvh;padding:0 14px}
+  .cart-lines>.empty-state{min-height:135px}
+  .cart-line{padding:11px 0}
+  .cart-line-title{font-size:11px}
+  .cart-line-bottom{margin-top:9px}
+  .basket-summary{padding:15px 14px}
+  .grand-total strong{font-size:21px}
+  .basket-summary>small{font-size:8px}
+  .checkout{padding:12px}
+  .sales-filter-bar{align-items:stretch;padding:12px;gap:8px}
+  .sales-filter-bar label{min-width:calc(50% - 5px);justify-content:space-between;font-size:9px}
+  .sales-filter-bar input{width:100%;max-width:145px;padding:7px;font-size:10px}
+  .sales-filter-total{margin-left:auto;align-self:center}
+  .sales-filter-total b{font-size:15px}
+  .sales-row-actions{align-items:flex-start;flex-direction:column;gap:5px}
+  .daily-sales-panel{margin-top:13px}
+  .delete-sale-dialog{padding:14px}
+  .delete-sale-warning{padding:11px}
+  .delete-sale-warning p{font-size:10px;line-height:1.6}
+  .modal-backdrop{padding:10px;align-items:center}
+  .modal{max-height:92dvh;border-radius:13px}
+  .modal-heading{padding:13px 15px}
+  .modal-heading h2{font-size:13px}
+  .receipt{padding:17px 13px}
+  .receipt table{white-space:normal}
+  .receipt td,.receipt th{padding:9px 6px;font-size:9px;white-space:normal}
+  .receipt>h2{font-size:17px}
+  .receipt>p{font-size:9px;line-height:1.5}
+  .receipt-total{font-size:15px;padding:15px 5px}
+  footer{margin-top:18px;padding:13px 0 16px;font-size:8px;gap:8px}
+}
+
+@media(max-width:380px){
+  main{padding-left:10px;padding-right:10px}
+  .sidebar{padding-left:9px;padding-right:9px}
+  .sidebar nav button{padding:8px 8px;font-size:9px}
+  .sidebar nav button svg{width:14px}
+  .page-title{flex-direction:column}
+  .title-actions{justify-content:flex-start;width:100%}
+  .stat-card{padding:11px 9px}
+  .product-grid{gap:6px;padding:9px}
+  .product-card{padding:9px}
+  .sales-filter-bar label{min-width:100%}
+  .sales-filter-bar input{max-width:none;flex:1}
+}
